@@ -57,14 +57,15 @@ public class TennisGame {
 
     /**
      * Increments the score of the given player.
-     * @param player Name of the player whose score will be implemented.
+     * @param name Name of the player whose score will be implemented.
+     * @throws IllegalArgumentException If the given name does not match that of playerOne or playerTwo.
      */
-    public void incrementScore(String player){
+    public void incrementScore(String name){
         // Could refactor to use enum rather than string to save on string comparison.
-        if (player.equals(playerOne)) {
+        if (name.equals(playerOne)) {
             playerOneScore++;
         }
-        else if (player.equals(playerTwo)){
+        else if (name.equals(playerTwo)){
             playerTwoScore++;
         }
         else { // Name is not recognised so throw exception.
