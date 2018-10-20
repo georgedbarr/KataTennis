@@ -19,7 +19,7 @@ class TennisGameTest {
 
     @Test
     void newGame() {
-        Assertions.assertEquals("The score is Love - Love", game.reportScore());
+        Assertions.assertEquals("The score is Love - Love.", game.reportScore());
     }
 
     @Test
@@ -210,7 +210,7 @@ class TennisGameTest {
         game.incrementScore(playerTwo);
         game.incrementScore(playerTwo);
         game.incrementScore(playerTwo);
-        Assertions.assertEquals("Game, Set and Match " + playerOne + "!", game.reportScore());
+        Assertions.assertEquals("Game, Set and Match " + playerTwo + "!", game.reportScore());
     }
 
 }
