@@ -15,7 +15,7 @@ public class TennisGame {
      * Default constructor - passes in two names to main constructor.
      */
     public TennisGame() {
-        this("Ricky", "Bubbles");
+        this("Barack Obama", "Donald Trump");
     }
 
     /**
@@ -67,6 +67,8 @@ public class TennisGame {
         else if (player.equals(playerTwo)){
             playerTwoScore++;
         }
-        // Should raise an error if name is not recognised.
+        else { // Name is not recognised so throw exception.
+            throw new IllegalArgumentException("Name not recognised!");
+        }
     }
 }

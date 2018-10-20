@@ -10,12 +10,22 @@ import org.junit.jupiter.api.Test;
 class TennisGameTest {
 
     private TennisGame game;
-    private static final String playerOne = "Ezra";
-    private static final String playerTwo = "Marvin";
+    private static final String playerOne = "Ricky";
+    private static final String playerTwo = "Julian";
 
     @BeforeEach
     void setUp() {
         game = new TennisGame(playerOne, playerTwo);
+    }
+
+    @Test
+    void incrementScoreNameNotRecognisedException() {
+
+        String imaginaryPlayer = "Bubbles";
+        IllegalArgumentException e = Assertions.assertThrows(IllegalArgumentException.class,
+                ()->{game.incrementScore(imaginaryPlayer);});
+
+        Assertions.assertEquals(e.getMessage(), "Name not recognised!");
     }
 
     @Test
