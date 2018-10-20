@@ -24,7 +24,12 @@ public class TennisGame {
     }
 
     public void incrementScore(String player){
-
+        if (player.equals(playerOne)) {
+            playerOneScore++;
+        }
+        else if (player.equals(playerTwo)){
+            playerTwoScore++;
+        }
     }
 
 }
