@@ -4,8 +4,9 @@ import org.junit.jupiter.api.Assertions;
 import org.junit.jupiter.api.BeforeEach;
 import org.junit.jupiter.api.Test;
 
-import com.gdb.TennisGame;
-
+/**
+ * A test class for the TennisGame class.
+ */
 class TennisGameTest {
 
     private TennisGame game;
